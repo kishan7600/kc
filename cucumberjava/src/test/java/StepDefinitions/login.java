@@ -10,14 +10,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
- public class login {
+ public class login extends Init{
 
-	private WebDriver driver;
+	//private WebDriver driver;
 	O_Login Login = new O_Login(driver);
 
 	@When("User click on login link")
 	public void User_Click_On_Login_Link() {
-		Login.OpenBrowser();
+		
 		Login.LoginLink();
 
 	}

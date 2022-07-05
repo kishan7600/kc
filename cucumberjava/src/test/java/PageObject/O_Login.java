@@ -15,6 +15,7 @@ public class O_Login {
 	By Password = By.id("Password");
 	By loginButton = By.id("btnLogin");
 	By welcome = By.xpath("//*[@class='welcomeInfo']");
+	By loginvalidationMessage = By.xpath("//*[@class=\"validation-summary-errors text-danger list-unstyled\"]");
 
 	public O_Login(WebDriver driver) {
 		this.driver = driver;
@@ -48,5 +49,9 @@ public class O_Login {
 	public void VerifyMemberlogin(boolean value) {
 		driver.findElement(welcome).isDisplayed();
 		driver.quit();
+	}
+
+	public void LoginValidationMessage(boolean message) {
+		driver.findElement(loginvalidationMessage).isDisplayed();
 	}
 }
