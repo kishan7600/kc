@@ -5,4 +5,4 @@ Feature: Login Action
     Then User enter memberID
     Then User enter password
     And User click on login button
-    Then User verify member welcome text
+    Then User verify member welcome element
